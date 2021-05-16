@@ -1,0 +1,28 @@
+{
+  "name": "iMessageBot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamhoward56/iMessageBot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adamhoward56/iMessageBot/issues"
+  },
+  "homepage": "https://github.com/adamhoward56/iMessageBot#readme",
+  "dependencies": {
+    "node-mac-permissions": "^2.2.0",
+    "prompt": "^1.1.0",
+    "run-applescript": "^5.0.0",
+    "sqlite": "^4.0.22",
+    "sqlite3": "^5.0.2"
+  }
+}
