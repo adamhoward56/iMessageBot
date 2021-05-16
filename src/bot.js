@@ -4,7 +4,6 @@ import { parseMessages } from './messages.js'
 import { userInfo } from 'os'
 
 
-
 var username = userInfo().username
 var dbPath = `/Users/${username}/Library/Messages/chat.db`
 var chatDb = null
@@ -55,13 +54,17 @@ async function pollDb () {
 }
 
 
+/**
+ * Receives database connectiona and initializes polling at a fixed interval.
+ * @param {Object} db sqlite database connectio 
+ */
 function initDb(db) {
     chatDb = db
     console.log('Successfully connected to iMessage chat.db!\nListening...')
 
     // Poll the database
     pollDb()
-    setInterval(pollDb, 1000)
+    setInterval(pollDb, 1500)
 }
 
 
@@ -72,5 +75,5 @@ open({
     driver: sqlite3.cached.Database,
     mode: sqlite3.OPEN_READONLY
 })
-    .then(db => initDb(db))
-    .catch(err => console.log(err))
+.then(db => initDb(db))
+.catch(err => console.log(err))
