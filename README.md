@@ -39,6 +39,9 @@ See the format of the existing commands for implementation details.
 # Get usage info about a specific command
 /help <command>
 
+# Useful for quick tests
+/ping
+
 # Generate a random emoji
 /random-emoji
 
